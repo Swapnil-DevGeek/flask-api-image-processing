@@ -87,9 +87,10 @@ curl -X POST -F "file=@/path/to/image.jpg" http://localhost:8000/predict
     }
 ]
 ```
-
 ## Notes
--Ensure that the API server is running before making requests.
--The API is designed to handle image files in common formats such as JPEG, PNG, etc.
--The predictions are based on the ImageNet classes that the MobileNetV2 model was trained on.
--The confidence scores represent the probability of each predicted class.
+
+- **Ensure that the API server is running before making requests.**
+- **The API is designed to handle image files in common formats such as JPEG, PNG, etc.**
+- **The predictions are based on the ImageNet classes that the MobileNetV2 model was trained on.**
+- **The confidence scores represent the probability of each predicted class.**
+

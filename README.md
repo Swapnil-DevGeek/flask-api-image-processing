@@ -53,6 +53,8 @@ The Image Processing API utilizes Flask, a micro web framework for Python, to ha
 
 2. The API will start running on `http://localhost:8000`.
 
+3. You can also upload files via the web interface by visiting `http://localhost:8000` in your browser.
+
 ### API Endpoints
 
 - **Upload Image**: 
@@ -94,3 +96,8 @@ curl -X POST -F "file=@/path/to/image.jpg" http://localhost:8000/predict
 - **The predictions are based on the ImageNet classes that the MobileNetV2 model was trained on.**
 - **The confidence scores represent the probability of each predicted class.**
 
+## Handling Long-Running Tasks with Redis and Asynchronous Approach
+
+### Asynchronous Approach
+
+The asynchronous approach utilizes Celery with Redis as the message broker to handle long-running image processing tasks efficiently. Tasks are queued asynchronously, allowing the API to respond quickly while processing tasks in the background. Clients can poll for task status or receive real-time updates using Redis Pub/Sub.
